@@ -1,8 +1,13 @@
 # Kirby Auto Publish
 
-This plugin extends [Kirby 2.1](http://getkirby.com) with the possibility to auto publish pages that are created with the Kirby Admin Panel.
+This plugin extends [Kirby](http://getkirby.com) with the possibility to auto publish pages that are created with the Kirby Admin Panel.
 
 By default new pages are invisible on creation. This plugin allows you to make all new pages or certain types of pages visible by default.
+
+## Version compatibility
+
+- version 1.* is compatible with Kirby 2.1
+- version 2.* is compatible with Kirby 2.2
 
 ## Installation
 
@@ -19,6 +24,10 @@ i.e. if you wish to make all pages using the "project" and "item" template visib
 ```
 c::set('autopublish.templates', array('project', 'item'));
 ```
+
+## Known issues
+
+The plugin can conflict with other code or plugins that use the `panel.page.create` hook.
 
 ---
 

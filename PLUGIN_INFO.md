@@ -2,7 +2,8 @@
 
 By default, new pages are invisible on creation. This plugin allows you to make all new pages or certain types of pages visible by default.
 
-**Requires** : Kirby 2.1
+version 1.* : **Requires** : Kirby 2.1
+version 2.* : **Requires** : Kirby 2.2
 
 ## Installation
 

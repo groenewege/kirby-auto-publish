@@ -1,17 +1,14 @@
 <?php
 
-kirby()->hook('panel.page.create', function($page) {
-	$templates = c::get('autopublish.templates', false);
+kirby()->hook('panel.page.create', 'run');
+
+function run( $page ) {
+	$templates = c::get('autopublish.templates', array('project', 'item'));
 	if (!$templates || in_array($page->template(), $templates)) {
-		$parent = $page->parent();
-		$subpages = new Subpages($parent);
 		try {
-			$num = $subpages->sort($page, 'last');
-			return response::success('The page has been sorted', array(
-				'num' => $num
-				));
+			$page->toggle('last');
 		} catch(Exception $e) {
 			return response::error($e->getMessage());
 		}
 	}
-});
+}
