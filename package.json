@@ -1,0 +1,8 @@
+{
+  "name": "autopublish",
+  "description": "Kirby Auto Publish Plugin",
+  "author": "Gunther Groenewege",
+  "license": "MIT",
+  "version": "2.1.0",
+  "type": "kirby-plugin"
+}
